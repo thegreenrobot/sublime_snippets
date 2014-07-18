@@ -1,0 +1,25 @@
+<snippet>
+    <content><![CDATA[
+example_check_name = 'example'
+example_alarm_name = 'example alarm'
+
+cloud_monitoring_check example_check_name do
+  entity_label node['fqdn']
+  type 'agent.plugin'
+  details 'file' => 'EXAMPLE_PLUGIN.sh'
+  period node['cloud_monitoring']['period']['agent']
+  timeout node['cloud_monitoring']['timeout']['agent']
+  action :create
+end
+
+cloud_monitoring_alarm example_alarm_name do
+  check_label example_check_name
+  entity_label node['fqdn']
+  criteria ExampleProcessAlarmCriteria.SET_METHOD_HERE
+  notification_plan_id node['cloud_monitoring']['notification_plan_id']
+  action :create
+end
+]]></content>
+    <tabTrigger>cmcheck</tabTrigger> -->
+    <scope>source.ruby</scope> -->
+</snippet>

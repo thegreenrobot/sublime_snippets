@@ -1,0 +1,24 @@
+<snippet>
+    <content><![CDATA[
+# encoding: UTF-8
+
+class Chef
+  class Recipe
+    # Alarm Criteria
+    class ExampleProcessAlarmCriteria
+      def self.example_method_here
+        <<-EOF
+          if (metric['running'] == 'yes') {
+            return new AlarmStatus(OK, 'Example service is up and running');
+          }
+          return new AlarmStatus(CRITICAL, 'Example service is not running');
+        EOF
+      end
+    end
+  end
+end
+
+]]></content>
+    <tabTrigger>cmlibrary</tabTrigger>
+    <scope>source.ruby</scope> -->
+</snippet>

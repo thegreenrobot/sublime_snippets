@@ -1,4 +1,8 @@
-sublime_snippets
-================
+# Various Sublime Snippets
+I like snippets.  Snippets are good.
 
-Various Sublime Snippets
+# Saving your snippets
+* On OS X ...
+``` ~/Library/Application Support/Sublime Text 2/Packages/User/new_awesome_thing.sublime-snippet ```
+* On Linux ...
+``` insert path here ```
